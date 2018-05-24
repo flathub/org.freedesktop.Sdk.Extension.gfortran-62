@@ -77,7 +77,8 @@
                     "type": "script",
                     "commands": [
                         "mkdir -p /app/lib",
-                        "cp -P /usr/lib/sdk/gfortran-62/lib/libquadmath.so* /usr/lib/sdk/gfortran-62/lib/libgfortran.so* /app/lib/"
+                        "if [ -e /usr/lib/sdk/gfortran-62/lib/libquadmath.so ]; then cp -P /usr/lib/sdk/gfortran-62/lib/libquadmath.so* /app/lib; fi",
+                        "cp -P /usr/lib/sdk/gfortran-62/lib/libgfortran.so* /app/lib/"
                     ],
                     "dest-filename": "install.sh"
                 },
