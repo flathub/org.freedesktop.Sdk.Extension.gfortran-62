@@ -53,7 +53,10 @@
                     "arm" : {
                         "config-opts" : [
                             "--build=arm-unknown-linux-gnueabi",
-                            "--with-float=hard"
+                            "--with-float=hard",
+                            "--with-mode=thumb",
+                            "--with-fpu=vfpv3-d16",
+                            "--with-arch=armv7-a"
                         ]
                     }
                 }
